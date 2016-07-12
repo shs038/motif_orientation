@@ -298,7 +298,7 @@ for sp in significant_pairs:
 #indexing by tuple
 co_occur_orientation.loc[(('arntl_mitf','cenpb'),),:]
 P_correct_by_times.loc[(('egr','thap1'),),:]
-#import co_occur pairs,p_0.025/195(choose one)
+#import co_occur pairs,p_0.025/195(choose one)-from co_ocur_pdf
 co_occur_pairs = pd.read_csv('/Users/sun/Desktop/sigpair.tsv', sep='\t')
 del co_occur_pairs['Unnamed: 0']
 Motifpair = P_correct_by_times.index.values
@@ -309,7 +309,7 @@ for mp in Motifpair:
         elif mp[0] == co_occur_pairs.loc[j,'motif2'] and mp[1] == co_occur_pairs.loc[j,'motif1']:
             P_correct_by_times.loc[(mp,),:]=100
 P_correct_by_times=P_correct_by_times[P_correct_by_times.ix[:,0]!=100]
-#impoart co_occur pairs,p_0.05/195(choose one)
+#impoart co_occur pairs,p_0.05/195(choose one)-from co_ocur_pdf
 co_occur_pairs_more = pd.read_csv('/Users/sun/Desktop/sigpair_more.tsv', sep='\t')
 del co_occur_pairs_more['Unnamed: 0']
 Motifpair = P_correct_by_times.index.values
