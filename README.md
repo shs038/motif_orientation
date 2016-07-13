@@ -7,6 +7,7 @@ import scipy
 from scipy import stats
 from collections import Counter
 %matplotlib inline
+#count orientation
 def count_orientation(motif_orientation):
     '''
     input:a pandas dataframe contains motifs orientation data
